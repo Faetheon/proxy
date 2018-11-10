@@ -4,7 +4,7 @@ const cors = require('cors');
 const Sequelize = require('sequelize');
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require(__dirname + '/../knexfile.js')[environment];
